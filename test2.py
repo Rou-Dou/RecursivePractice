@@ -38,10 +38,10 @@ dict_ = \
             "ListDictKey2" : "ListDictValue2", 
             "ListDictKey3" : 
             [
-                "LlistDictListValue1", 
+                "ListDictListValue1", 
                 "ListDictListValue2", 
                 {
-                    "ListDictDictKey1" : "ListDictDictValue1"
+                    "ListDictListDictKey1" : "ListDictListDictValue1"
                 }
             ]
         }
