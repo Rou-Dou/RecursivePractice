@@ -20,8 +20,14 @@ dict_ = \
     "Key6" : 
     {
         "SubKey1" : "SubValue1", 
-        "SubKey2" : {
-            "SubSubKey1" : "SubSubValue2", "SubSubKey2" : ["ListItem1", "ListItem2"]
+        "SubKey2" : 
+        {
+            "SubSubKey1" : "SubSubValue2", 
+            "SubSubKey2" : 
+            [
+                "ListItem1", 
+                "ListItem2"
+            ]
         }
     },
     "Key7" : 
