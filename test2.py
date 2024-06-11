@@ -53,15 +53,12 @@ dict_: dict[str, Any] = \
 def recursive(dict_: dict) -> None:
     for key, value in dict_.items(): 
         if type(value) is dict:
-            print(key + ': {')
-            recursive(value)
-            print("}")
+            print_dict(key, value)
             continue
             
         if type(value) is list:
-            print(key + ' [')
-            for num, item in enumerate(value, 1):
-                print(f'list item {num}: ')
+            print(f'{key} : ' + '[')
+            for item in value:
                 if type(item) is dict:
                     print("{")
                     recursive(item)
@@ -70,8 +67,13 @@ def recursive(dict_: dict) -> None:
                 print(item)
             print(']')
             continue
-        print('key: {}, value: {}'.format(key, value))
+        print('{} : {}'.format(key, value))
     
 
+
+def print_dict(key, value) -> None:
+    print(f'{key} : ' + "{")
+    recursive(value)
+    print('}')
 
 recursive(dict_)
