@@ -1,4 +1,6 @@
-dict_ = \
+from typing import Any
+
+dict_: dict[str, Any] = \
 {
     "Key1" : "Value1",
     "Key2" : "Value2",
@@ -48,7 +50,7 @@ dict_ = \
     ]
 }
 
-def recursive(dict_: dict):
+def recursive(dict_: dict) -> None:
     for key, value in dict_.items(): 
         if type(value) is dict:
             print(key + ': {')
